@@ -1,0 +1,29 @@
+* cv2.approxPolyDP(curve, epsilon, closed)
+curve: The input curve (contour) you want to approximate.
+
+epsilon: A parameter that controls the approximation accuracy. Smaller values result in a more accurate approximation.
+	Proportional to Perimeter:
+			The cv2.arcLength(contour, True) perimeter ofcontour. when True means curve is closed 
+			 1% of the contour's perimeter.
+
+closed: A boolean flag that indicates whether the curve is a closed contour or not.
+
+*Ravel
+	This function is used to flatten a multi-dimensional array into a one-dimensional array. 
+
+*Heirarchy[Next, Previous, First_Child, Parent]
+
+*RETR_LST
+Parents and kids are equal under this rule, and they are just contours
+
+*RETR_EXTERNAL
+We can say, under this law, Only the eldest in every family is taken care of. It doesn't care about other members of the family 
+
+*RETR_CCOMP
+external contours of the object (ie its boundary) are placed in hierarchy-1. And the contours of holes inside object (if any) is placed in hierarchy-2.
+
+* RETR_TREE
+It retrieves all the contours and creates a full family hierarchy list
+
+*cv.waitKey(1) & 0xFF == ord('q')
+This is done to extract the lowest 8 bits of the returned value
